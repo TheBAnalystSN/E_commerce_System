@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Product = void 0;
-class Product {
+export class Product {
     id;
     title;
     price;
@@ -27,5 +24,4 @@ class Product {
         return this.price - discount;
     }
 }
-exports.Product = Product;
 //# sourceMappingURL=Product.js.map
