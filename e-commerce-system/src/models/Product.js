@@ -9,19 +9,15 @@ export class Product {
         this.title = productData.title;
         this.price = productData.price;
         this.category = productData.category;
-        this.discountPercentage = productData.discountPercentage;
+        this.discountPercentage = productData.discountPercentage || 0;
     }
     displayDetails() {
-        console.log("Product:", this.title);
-        console.log("Category:", this.category);
-        console.log("Price:", this.price);
+        console.log(`Product: ${this.title}`);
+        console.log(`Price: $${this.price}`);
+        console.log(`Category: ${this.category}`);
     }
     getPriceWithDiscount() {
-        let discount = 0;
-        if (this.discountPercentage) {
-            discount = (this.price * this.discountPercentage) / 100;
-        }
-        return this.price - discount;
+        return this.price - (this.price * (this.discountPercentage || 0) / 100);
     }
 }
 //# sourceMappingURL=Product.js.map

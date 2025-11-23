@@ -1,4 +1,2 @@
-export function calculateTax(price: number, category: string) {
-  const taxRate = category === "groceries" ? 0.03 : 0.0475;
-  return price * taxRate;
-}
+export declare function calculateTax(price: number, category: string): number;
+//# sourceMappingURL=taxCalculator.d.ts.map

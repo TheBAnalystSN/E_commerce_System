@@ -1,10 +1,4 @@
-export class AppError extends Error {
-    constructor(message) {
-        super(message);
-        this.name = "AppError";
-    }
-}
-export function handleError(err) {
-    console.log("Something went wrong: ", err.message || err);
+export function handleError(error) {
+    console.error("An error occurred:", error);
 }
 //# sourceMappingURL=errorHandler.js.map

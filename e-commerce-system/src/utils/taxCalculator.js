@@ -1,9 +1,5 @@
 export function calculateTax(price, category) {
-    let taxRate = 0.0475;
-    if (category === "groceries") {
-        taxRate = 0.03;
-    }
-    let tax = price * taxRate;
-    return tax;
+    const taxRate = category === "groceries" ? 0.03 : 0.0475;
+    return price * taxRate;
 }
 //# sourceMappingURL=taxCalculator.js.map

@@ -1,8 +1,4 @@
-export function calculateDiscount(price, discountPercentage) {
-    if (!discountPercentage) {
-        return 0;
-    }
-    let discountAmount = (price * discountPercentage) / 100;
-    return discountAmount;
+export function calculateDiscount(price, discountPercentage = 0) {
+    return (price * discountPercentage) / 100;
 }
 //# sourceMappingURL=discountCalculator.js.map

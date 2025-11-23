@@ -1,16 +1,9 @@
-import { AppError } from "../utils/errorHandler";
-const API_URL = "https://dummyjson.com/products";
 export async function fetchProducts() {
-    try {
-        const res = await fetch(API_URL);
-        if (!res.ok) {
-            throw new AppError("Failed to fetch products");
-        }
-        const data = await res.json();
-        return data.products;
+    const response = await fetch("https://dummyjson.com/products");
+    if (!response.ok) {
+        throw new Error("Failed to fetch products");
     }
-    catch (err) {
-        throw new AppError("Unable to fetch API data");
-    }
+    const data = await response.json();
+    return data.products;
 }
 //# sourceMappingURL=apiService.js.map
