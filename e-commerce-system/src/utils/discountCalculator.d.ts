@@ -1,2 +1,3 @@
-export declare function calculateDiscount(price: number, discountPercentage: number | undefined): number;
-//# sourceMappingURL=discountCalculator.d.ts.map
+export function calculateDiscount(price: number, discountPercentage: number = 0) {
+  return (price * discountPercentage) / 100;
+}
