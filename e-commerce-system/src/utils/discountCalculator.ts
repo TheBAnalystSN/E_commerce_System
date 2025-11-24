@@ -1,6 +1,3 @@
-export function calculateDiscount(
-    price: number,
-    discountPercentage: number = 0
-): number {
-    return (price * discountPercentage) / 100;
+export function calculateDiscount(price: number, discountPercentage: number = 0) {
+  return (price * discountPercentage) / 100;
 }

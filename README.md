@@ -1,4 +1,4 @@
-E‑Commerce Product Management System (SBA)
+E‑Commerce Product Management System
 
 TypeScript & Advanced JavaScript — Junior-Level Project
 

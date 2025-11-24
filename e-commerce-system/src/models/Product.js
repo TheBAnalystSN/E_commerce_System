@@ -17,7 +17,9 @@ export class Product {
         console.log(`Category: ${this.category}`);
     }
     getPriceWithDiscount() {
-        return this.price - (this.price * (this.discountPercentage || 0) / 100);
+        if (!this.discountPercentage)
+            return this.price;
+        return this.price - (this.price * this.discountPercentage) / 100;
     }
 }
 //# sourceMappingURL=Product.js.map
