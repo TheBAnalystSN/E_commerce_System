@@ -22,4 +22,3 @@ export class Product {
         return this.price - (this.price * this.discountPercentage) / 100;
     }
 }
-//# sourceMappingURL=Product.js.map
