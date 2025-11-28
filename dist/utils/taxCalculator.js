@@ -10,4 +10,3 @@ function calculateTax(price, category) {
     const tax = price * rate;
     return +tax.toFixed(2);
 }
-//# sourceMappingURL=taxCalculator.js.map

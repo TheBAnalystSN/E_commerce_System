@@ -37,4 +37,3 @@ async function fetchProductById(id) {
         throw new errorHandler_1.AppError('Network or parsing error while fetching product by id');
     }
 }
-//# sourceMappingURL=apiService.js.map

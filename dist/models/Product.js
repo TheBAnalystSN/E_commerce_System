@@ -2,11 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Product = void 0;
 class Product {
-    id;
-    title;
-    price;
-    category;
-    discountPercentage;
     constructor(data) {
         this.id = data.id;
         this.title = data.title;
@@ -24,4 +19,3 @@ class Product {
     }
 }
 exports.Product = Product;
-//# sourceMappingURL=Product.js.map

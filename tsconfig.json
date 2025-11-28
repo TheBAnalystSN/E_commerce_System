@@ -1,27 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
     "module": "CommonJS",
-    "moduleResolution": "Node",
-    "rootDir": "src",
-    "outDir": "dist",
+    "target": "ES2020",
+    "rootDir": "./src",
+    "outDir": "./dist",
     "strict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "esModuleInterop": true
   },
-  "include": ["src/**/*"],
+  "include": ["src"],
   "exclude": [
     "node_modules",
     "**/.vscode",
     "**/.history",
-    "**/History",
-    "AppData",
-    "**/AppData",
-    "**/OneDrive",
-    "**/test",
-    "**/*backup*",
-    "**/*.tmp",
-    "**/*.history"
+    "C:/Users/mrdus/AppData/Roaming/Code/User/History"
   ]
 }

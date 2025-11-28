@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppError = void 0;
 exports.handleError = handleError;
 class AppError extends Error {
-    status;
     constructor(message, status) {
         super(message);
         this.name = 'AppError';
@@ -22,4 +21,3 @@ function handleError(err) {
         console.error('Unknown error:', err);
     }
 }
-//# sourceMappingURL=errorHandler.js.map

@@ -12,4 +12,3 @@ function calculateDiscount(price, discountPercentage) {
         return 0;
     return price * (discountPercentage / 100);
 }
-//# sourceMappingURL=discountCalculator.js.map
