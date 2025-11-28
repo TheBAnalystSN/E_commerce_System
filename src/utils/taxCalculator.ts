@@ -1,4 +1,8 @@
-export function calculateTax(price: number, category: string) {
-  const taxRate = category === "groceries" ? 0.03 : 0.0475;
-  return price * taxRate;
+export function calculateTax(price: number, category?: string): number {
+if (typeof price !== 'number') return 0;
+const defaultRate = 0.0475;
+const groceriesRate = 0.03;
+const rate = category && category.toLowerCase() === 'groceries' ? groceriesRate : defaultRate;
+const tax = price * rate;
+return +tax.toFixed(2);
 }
