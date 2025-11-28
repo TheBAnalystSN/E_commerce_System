@@ -2,7 +2,7 @@ import { Product } from "./models/Product";
 import { fetchProducts } from "./services/apiService";
 import { calculateDiscount } from "./utils/discountCalculator";
 import { calculateTax } from "./utils/taxCalculator";
-import { AppError } from "./utils/errorHandler";
+import { AppError, handleError } from "./utils/errorHandler";
 async function main() {
     try {
         const products = await fetchProducts();

@@ -4,22 +4,20 @@ export class Product {
     price;
     category;
     discountPercentage;
-    constructor(productData) {
-        this.id = productData.id;
-        this.title = productData.title;
-        this.price = productData.price;
-        this.category = productData.category;
-        this.discountPercentage = productData.discountPercentage || 0;
+    constructor(data) {
+        this.id = data.id;
+        this.title = data.title;
+        this.price = data.price;
+        this.category = data.category ?? 'other';
+        this.discountPercentage = data.discountPercentage ?? 0;
     }
     displayDetails() {
-        console.log(`Product: ${this.title}`);
-        console.log(`Price: $${this.price}`);
-        console.log(`Category: ${this.category}`);
+        console.log(`Product: ${this.title} (ID: ${this.id})`);
+        console.log(`Category: ${this.category} • Price: $${this.price.toFixed(2)}`);
     }
     getPriceWithDiscount() {
-        if (!this.discountPercentage)
-            return this.price;
-        return this.price - (this.price * this.discountPercentage) / 100;
+        const discounted = this.price - (this.price * this.discountPercentage) / 100;
+        return +discounted.toFixed(2);
     }
 }
 //# sourceMappingURL=Product.js.map
