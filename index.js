@@ -1,8 +1,8 @@
-import { Product } from "./models/Product.js";
-import { fetchProducts } from "./services/apiService.js";
-import { calculateDiscount } from "./utils/discountCalculator.js";
-import { calculateTax } from "./utils/taxCalculator.js";
-import { handleError } from "./utils/errorHandler.js";
+import { Product } from "./models/Product";
+import { fetchProducts } from "./services/apiService";
+import { calculateDiscount } from "./utils/discountCalculator";
+import { calculateTax } from "./utils/taxCalculator";
+import { AppError } from "./utils/errorHandler";
 async function main() {
     try {
         const products = await fetchProducts();
