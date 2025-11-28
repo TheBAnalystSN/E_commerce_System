@@ -10,3 +10,5 @@ Another challenge was dealing with the ambient context errors. At first, I didn�
 I also struggled making sure `npm run start` worked without errors. Sometimes the compiled files weren’t showing up because I forgot to rebuild after changes, and other times the imports used `.ts` instead of `.js` which broke the runtime.
 
 If I had more time, I would improve the UI and make it more interactive—maybe add input fields, cart management, or fetch data from an API. But overall, I learned a lot about debugging TypeScript structure, fixing module resolution issues, and staying organized.
+
+I was actually given more time after turning in my assigment and I worked on it some on Thanksgiving and allday Friday and I took bryans advice and fixed some importing and exporting in my files. I also had to delete  the the history folder which was stoping everything from compiling and giving all the errors. Everything is now compiled and tested successfully. Thanks for the extra time.
