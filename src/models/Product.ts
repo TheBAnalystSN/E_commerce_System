@@ -1,26 +1,41 @@
+export interface ProductData {
+id: number;
+title: string;
+description?: string;
+price: number;
+discountPercentage?: number;
+rating?: number;
+stock?: number;
+brand?: string;
+category?: string;
+}
+
+
 export class Product {
-  id: number;
-  title: string;
-  price: number;
-  category: string;
-  discountPercentage?: number;
+id: number;
+title: string;
+price: number;
+category: string;
+discountPercentage: number;
 
-  constructor(productData: any) {
-    this.id = productData.id;
-    this.title = productData.title;
-    this.price = productData.price;
-    this.category = productData.category;
-    this.discountPercentage = productData.discountPercentage || 0;
-  }
 
-  displayDetails() {
-    console.log(`Product: ${this.title}`);
-    console.log(`Price: $${this.price}`);
-    console.log(`Category: ${this.category}`);
-  }
+constructor(data: ProductData) {
+this.id = data.id;
+this.title = data.title;
+this.price = data.price;
+this.category = data.category ?? 'other';
+this.discountPercentage = data.discountPercentage ?? 0;
+}
 
-  getPriceWithDiscount(): number {
-    if (!this.discountPercentage) return this.price;
-    return this.price - (this.price * this.discountPercentage) / 100;
-  }
+
+displayDetails(): void {
+console.log(`Product: ${this.title} (ID: ${this.id})`);
+console.log(`Category: ${this.category} • Price: $${this.price.toFixed(2)}`);
+}
+
+
+getPriceWithDiscount(): number {
+const discounted = this.price - (this.price * this.discountPercentage) / 100;
+return +discounted.toFixed(2);
+}
 }
